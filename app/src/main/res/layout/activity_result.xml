@@ -2,13 +2,68 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_results"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     tools:context=".ResultActivity">
     
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Congratulation"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Congratlations"/>
+        android:layout_below="@+id/grade"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-16dp"
+        android:padding="16dp"
+        android:text="Skor kamu"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_below="@+id/grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:padding="16dp"
+        android:textColor="#000"
+        android:layout_margin="16dp"
+        android:id="@+id/outOf"
+        android:text="You scored 8 out of 10"/>
+
+    <Button
+        android:layout_below="@+id/outOf"
+        android:id="@+id/retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coba Lagi"
+        android:padding="8dp"
+        android:layout_margin="4dp"
+        android:textColor="#fff"
+        android:background="#4CAF50"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
